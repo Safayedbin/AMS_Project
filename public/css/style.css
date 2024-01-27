@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.clear{
+    clear: both;
+}
+.no-padding {
+    padding: 0px;
+}
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+ }
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 100%;
+    width: 5%;
+    background-color: #F8891D;
+    margin: 0rem 4rem 0rem 0rem;
+    box-shadow: 16px 0px 21px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 16px 0px 21px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 16px 0px 21px 0px rgba(0,0,0,0.75);
+
+}
+.logo_white{
+    display:block; width: 97%; margin-top:40%;
+
+}
+.profileCover{
+    background-color: #F3F4FD;
+    height: 4.5rem;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+.profileLogo, .iconGrader{
+width: 2.5rem;
+height: 2.5rem;
+display: block;
+margin: 0 auto;
+border-radius: 50%;
+}
+
+.arrowbutton{
+    position: relative;
+    top: 0;
+    left: 85%;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    background-color: #0B0D4D;
+    border-color: transparent;
+    border-radius: 10%;
+}
+.fa-arrow-right-long{
+    font-size: x-large;
+    color: aliceblue;
+}
+.iconsidebar{
+    color: #0B0D4D;
+    font-size: large;
+    margin: 0 auto;
+    
+}
+
+.iconsidebar.logout{
+    color: white;
+    font-size: large;
+}
+
+.sidebarbtn {
+    width: 100%;
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.579);
+    padding: 1rem 2rem;
+}
+
+.sidebarbtn.logout {
+    width: 50%;
+    margin: 6rem 25%;
+    border: 1px solid rgba(255, 255, 255, 0.422);
+    border-radius: 10%;
+    background-color: rgb(0, 0, 0);
+    padding: 0.5rem;
+}
+.sidebarbtn.active{ 
+    background-color: #0B0D4D;
+}
+.iconsidebar.active{
+    color: white;
+}
+
+.DashboardBox {
+    background-color: #F3F4FD;
+    border-top: .75rem solid  #0ADCD5;
+    padding: 1rem 2rem 2rem;
+    margin: 1rem;
+    margin-top: 2rem;
+    border-radius: 2%;
+
+}
+
+/*courses dashaboard*/
+#cover {
+    width: 100%;
+}
+
+#cover img{
+    display: block;
+    width: 100%;
+}
+.header,.testpaper, .submissionTerminal{
+    background-color: #F3F4FD;
+    margin: 2rem 0rem;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.299);
+}
+
+.coursesButton li, #repeater .card ul li {
+    list-style: none;
+    float: left;
+}
+.coursesButton li:nth-child(n+2){
+    margin-left: 1rem;
+}
+.coursesButton li a{
+    color: white;
+    text-decoration: none;
+}
+
+
+#repeater .card ul li:nth-child(2) {
+    margin-left: 25rem;
+}
+#repeater .card ul li:nth-child(1) {
+    max-width: 20rem;
+}
+#repeater .card ul li:nth-child(3) {
+    margin-left: 3rem;
+}
+
+#repeater .card.test ul li:nth-child(2) {
+    margin-left: 20rem;
+}
+#repeater .card.test ul li:nth-child(4) {
+    margin-left: 2rem;
+}
+#repeater .card.test {
+    border-right: 12px solid black;
+    border-radius: 2%;
+}
+/*circular progrees bar codes */
+
+.circle-progress-value {
+	stroke-width: 6px;
+	stroke: hsl(39, 100%, 50%);
+}
+.circle-progress-circle {
+	stroke-width: 6px;
+	stroke: hsl(39, 100%, 85%);
+}
+.circle-progress-text {
+	fill: hsl(39, 100%, 50%);
+}
+#ProgressBox .card{
+    text-align: center;
+}
+
+#ProgressBox {
+    padding: 1rem;
+    background-color: rgb(238, 238, 238);
+    border-radius: 3%;
+}
+.progress{
+    background-color: white;
+}
+
+.iconGrader{
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+}
+
+.NoticeBoard{
+    background-color: #F3F4FD;
+    padding: 2rem;
+}
+.title{
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+.ExtraInfo{
+    border: 1px dotted black;
+    padding: 2rem 0rem 2rem 1rem;
+}
+.input_file{
+    padding: 3rem;
+}
+#TestNo{
+    padding: 0.5rem 2rem;
+}
