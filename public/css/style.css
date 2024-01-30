@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 .clear{
     clear: both;
 }
@@ -63,7 +67,7 @@ border-radius: 50%;
     color: #0B0D4D;
     font-size: large;
     margin: 0 auto;
-    
+
 }
 
 .iconsidebar.logout{
@@ -86,7 +90,7 @@ border-radius: 50%;
     background-color: rgb(0, 0, 0);
     padding: 0.5rem;
 }
-.sidebarbtn.active{ 
+.sidebarbtn.active{
     background-color: #0B0D4D;
 }
 .iconsidebar.active{
