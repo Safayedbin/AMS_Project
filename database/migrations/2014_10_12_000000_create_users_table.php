@@ -14,11 +14,15 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->string('organization_id')->unique();
+            $table->unsignedBigInteger('image_fk');
+            $table->foreign('image_fk')->references('id')->on('images');
+
+            $table->enum('acc_type', ['Teacher', 'Student', 'admin', 'Controller']);
+            $table->enum('Title', ['Student', 'Lecturer', 'Assitant Professor', 'Professor']);
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('Updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 

@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('students', function (Blueprint $table) {
-            $table->id('id');
-            $table->string('name');
-            $table->string('pass');
+        Schema::create('notices', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->string('text');
+            $table->string('Post_at');
+            $table->unsignedBigInteger('course_fk');
+            $table->foreign('course_fk')->references('id')->on('courses');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
@@ -25,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('student');
+        Schema::dropIfExists('notices');
     }
 };

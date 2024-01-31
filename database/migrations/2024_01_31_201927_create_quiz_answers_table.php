@@ -11,14 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('question_banks', function (Blueprint $table) {
+        Schema::create('quiz_answers', function (Blueprint $table) {
             $table->id('id');
-            $table->integer('question_number');
-            $table->integer('marks');
-            $table->longText('question_text');
+            $table->foreign('id')->references('id')->on('questions')->onUpdate('cascade');
 
-            $table->unsignedBigInteger('test_fk');
-            $table->foreign('test_fk')->references('id')->on('tests');
+            $table->string('option1');
+            $table->string('option2');
+            $table->string('option3');
+            $table->string('option4');
+            $table->boolean('correct1');
+            $table->boolean('correct2');
+            $table->boolean('correct3');
+            $table->boolean('correct4');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
@@ -29,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('question_bank');
+        Schema::dropIfExists('quiz_answers');
     }
 };

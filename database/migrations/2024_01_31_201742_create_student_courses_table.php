@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('notices', function (Blueprint $table) {
+        Schema::create('student_courses', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->longText('text');
-
+            $table->unsignedBigInteger('student_fk');
             $table->unsignedBigInteger('course_fk');
-            $table->foreign('course_fk')->references('id')->on('courses');
-
+            $table->foreign('course_fk')->references('id')->on('courses')->cascadeOnUpdate();
+            $table->foreign('student_fk')->references('id')->on('users')->cascadeOnUpdate();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('notice');
+        Schema::dropIfExists('student_courses');
     }
 };

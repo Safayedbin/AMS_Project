@@ -11,15 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('answer_banks', function (Blueprint $table) {
+        Schema::create('questions', function (Blueprint $table) {
             $table->id();
-            $table->integer('answer_number');
-            $table->longText('answer_text');
-            $table->boolean('correct');
-
-            $table->unsignedBigInteger('question_fk');
-            $table->foreign('question_fk')->references('id')->on('question_banks');
-
+            $table->longText('Question_text');
+            $table->integer('Marks');
+            $table->unsignedBigInteger('exam_fk');
+            $table->foreign('exam_fk')->references('id')->on('exams')->onUpdate('cascade');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('_answer_bank');
+        Schema::dropIfExists('questions');
     }
 };

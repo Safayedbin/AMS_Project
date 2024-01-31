@@ -53,7 +53,7 @@
             <input class="time" type="text" name="title"><br>
             <input class="time" type="datetime-local" name="Due"><br>
             <input class="time" type="datetime-local" name="Unlocks"><br>
-            <input class="time" type="timer" id="examDuration" name="examDuration" min="1">
+            <input class="time" type="number" id="examDuration" name="examDuration" min="1">
         </div>
     </div>
     <div class="row">

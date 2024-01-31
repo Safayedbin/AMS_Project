@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('student_tracks', function (Blueprint $table) {
+        Schema::create('statuses', function (Blueprint $table) {
             $table->id();
+            $table->enum('Status', ['pending', 'completed', 'Assetment done']);
 
             $table->unsignedBigInteger('student_fk');
-            $table->foreign('student_fk')->references('id')->on('students');
-            $table->unsignedBigInteger('track_fk');
-            $table->foreign('track_fk')->references('id')->on('tracks');
-
+            $table->foreign('student_fk')->references('id')->on('users')->onUpdate('cascade');
+            $table->unsignedBigInteger('exam_fk');
+            $table->foreign('exam_fk')->references('id')->on('exams')->onUpdate('cascade');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('student_track');
+        Schema::dropIfExists('statuses');
     }
 };

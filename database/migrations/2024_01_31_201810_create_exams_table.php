@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('courses', function (Blueprint $table) {
-            $table->id('id');
-            $table->string('name');
+        Schema::create('exams', function (Blueprint $table) {
+            $table->id();
             $table->string('title');
-            $table->string('code');
-            $table->string('section');
-            $table->unsignedBigInteger('teacher_fk');
-            $table->foreign('teacher_fk')->references('id')->on('teachers');
-
-
+            $table->enum('type', ['test', 'assignment', 'quiz']);
+            $table->string('Due_date');
+            $table->string('unlocks');
+            $table->integer('Duration');
+            $table->integer('Total_Marks');
+            $table->unsignedBigInteger('course_fk');
+            $table->foreign('course_fk')->references('id')->on('courses')->onUpdate('cascade');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('course');
+        Schema::dropIfExists('exams');
     }
 };

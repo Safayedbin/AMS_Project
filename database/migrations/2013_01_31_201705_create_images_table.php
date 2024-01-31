@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tracks', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->double('marks_scored');
-            $table->unsignedBigInteger('question_fk');
-            $table->foreign('question_fk')->references('id')->on('question_banks');
-
+            $table->string('location');
+            $table->string('filename');
             $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
+            $table->timestamp('Updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('track');
+        Schema::dropIfExists('images');
     }
 };
