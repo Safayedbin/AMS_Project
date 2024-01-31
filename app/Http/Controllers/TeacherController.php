@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class TeacherController extends Controller
 {
+    public function courses(){ return view('Tcourses');}
+
+
+
     public function addassignment(){ return view('addassignment');}
     public function addNotice(){ return view('addNotice');}
     public function addQuiz(){ return view('addQuiz');}

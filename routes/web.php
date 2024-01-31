@@ -6,20 +6,16 @@ use App\Http\Controllers\ViewController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('LoginPage');
 });
+
+
+
+
+
+
 
 Route::get('/courses', [StudentController::class, 'courses']);
 Route::get('/gradesheet', [StudentController::class, 'gradesheet']);
@@ -36,6 +32,7 @@ Route::get('/gradepannel', [StudentController::class, 'gradepannel']);
 
 
 
+Route::get('/Tcourses', [TeacherController::class, 'courses']);
 Route::get('/addAssignment', [TeacherController::class, 'addassignment']);
 Route::get('/addQuiz', [TeacherController::class, 'addQuiz']);
 Route::get('/addTest', [TeacherController::class, 'addTest']);
