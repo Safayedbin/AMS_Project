@@ -7,6 +7,12 @@ a{
     text-decoration: none;
     color: black;
 }
+
+.accordion-body ul li{
+    list-style: none;
+    text-align: center;
+    margin: 2rem 0rem;
+}
 .clear{
     clear: both;
 }

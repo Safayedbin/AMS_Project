@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ViewController extends Controller
+class StudentController extends Controller
 {
     public function welcome(){ return view('welcome');}
     public function dashboard(){ return view('dashboard');}
@@ -18,4 +18,8 @@ class ViewController extends Controller
     public function noticepaper(){ return view('noticepaper');}
     public function gradesheet(){ return view('gradesheet');}
     public function gradepannel(){ return view('gradepannel');}
+
+
+
+
 }
