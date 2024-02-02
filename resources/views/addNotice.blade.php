@@ -48,7 +48,7 @@
 
 
 <div class="container">
-    <form action="" method="post">
+    <form action="/insertnotice" method="GET">
         <div class="row">
             <div class="col-3">
                 <label class="timeLabel" for="Title" style="display: block;">Notice Title</label>
@@ -56,13 +56,14 @@
             </div>
             <div class="col-3">
                 <input class="time" type="text" name="title"><br>
-                <input type="text"  hidden id="CurrentTime">
-                <textarea name="" id="" cols="100" rows="10"></textarea>
+                <input type="text" name="Post_at" hidden id="CurrentTime">
+                <input type="text" name="course_fk" value="{{$course['id']}}" hidden id="">
+                <textarea name="text" id="" cols="100" rows="10"></textarea>
             </div>
         </div>
        <div class="row d-flex justify-content-end">
         <div class="col-3">
-            <button type="button" class="btn btn-primary m-5">Post</button>
+            <button type="submit" class="btn btn-primary m-5">Post</button>
         </div>
        </div>
         </div>

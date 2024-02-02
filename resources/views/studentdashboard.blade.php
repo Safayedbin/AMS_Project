@@ -6,10 +6,10 @@
     <!--Dashboard Contenet starts-->
     <div class="row">
         <div class="col-12">
-            {}
+            
             <div id="RecenetAccessedCourses" class="DashboardBox">
                 <h4>Recenet Accessed Courses</h4>
-                <div class="card" style="width: 98%; margin: 0 auto;" onclick='window.location.href = "noticepannel"'>
+                <div class="card" style="width: 98%; margin: 0 auto;" onclick='window.location.href = "noticepannel/{{$data->first()->id}}"'>
                     <img src="image/Rectangle 7.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5>{{$data->first()->title ."-". $data->first()->course_code ."- Section ". $data->first()->section}}</h5>
@@ -30,7 +30,7 @@
                         @foreach ($chunk as $course)
                         <div class="col-6">
 
-                                <div class="card mt-5" style="width: 98%;" onclick='window.location.href = "noticepannel"'>
+                                <div class="card mt-5" style="width: 98%;" onclick='window.location.href = "noticepannel/{{$course->id}}"'>
                                     <img src="image/Rectangle 7.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5>{{$course->title ."-". $course->course_code ."- Section ". $course->section}}

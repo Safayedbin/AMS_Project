@@ -17,7 +17,7 @@ return new class extends Migration
             $table->enum('type', ['test', 'assignment', 'quiz']);
             $table->string('Due_date');
             $table->string('unlocks');
-            $table->integer('Duration');
+            $table->integer('Duration')->nullable();
             $table->integer('Total_Marks');
             $table->unsignedBigInteger('course_fk');
             $table->foreign('course_fk')->references('id')->on('courses')->onUpdate('cascade');

@@ -4,8 +4,8 @@
     <div class="row">
         <div class="col-12">
              <div class="header">
-                 <h2>Course Code-CourseName-Section</h2>
-                 <p><a href="/dashboard" >Dashboard</a>><a href="/noticepannel">Courses</a>>Assignment</p>
+                 <h2>{{$course["course_code"]."-".$course["title"] . "-Section " . $course["section"] }}</h2>
+                 <p><a href="/dashboard" >Dashboard</a>><a href="/noticepannel/{{$course['id']}}">Courses</a>>Assignment</p>
              </div>
         </div>
         </div>

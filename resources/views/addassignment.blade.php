@@ -1,6 +1,7 @@
 @extends('layouts.addAssignment')
 
 @section('content')
+<!--Courses Content-->
 
 
 <style>
@@ -41,27 +42,30 @@
     }
 </style>
 <div class="container">
-<form action="" method="post">
+<form action="/insertassignment" method="GET">
     <div class="row">
         <div class="col-3">
             <label class="timeLabel" for="Title" style="display: block;">Title</label>
+            <label class="timeLabel" for="Total_Marks" style="display: block;">Total Marks</label>
             <label class="timeLabel mt-2" for="Due Date" style="display: block;">Due Date</label>
             <label class="timeLabel" for="time" style="display: block;">Unlocks at </label>
-            <label class="timeLabel" for="examDuration">Duration (in minutes):</label>
         </div>
         <div class="col-3">
             <input class="time" type="text" name="title"><br>
-            <input class="time" type="datetime-local" name="Due"><br>
-            <input class="time" type="datetime-local" name="Unlocks"><br>
-            <input class="time" type="number" id="examDuration" name="examDuration" min="1">
+            <input class="time" type="text" name="Total_Marks" ><br>
+            <input class="time" type="date" name="Due_date"><br>
+            <input class="time" type="date" name="unlocks"><br>
         </div>
     </div>
+    <input class="time" type="text" hidden name="type" value="assignment"><br>
+    <input class="time" type="text" hidden name="course_fk" value="{{$course['id']}}"><br>
+
     <div class="row">
         <div class="col-12">
             <br><br><br>
             <p style="color: red;">*Changing the number of question will remove all written question and answer her </p>
             <label for="numQuestions">Select number of questions:</label>
-            <select id="numQuestions" onchange="createInputs()">
+            <select id="numQuestions" name="numQuestions" onchange="createInputs()">
                 <option value="">--Please choose an option--</option>
             </select>
 

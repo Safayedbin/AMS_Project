@@ -12,7 +12,11 @@ class Question extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["Question_text", 'Marks'];
+    protected $fillable = [
+        "Question_text",
+        "Marks",
+        "exam_fk"
+    ];
 
 
     public function answer():HasOne{

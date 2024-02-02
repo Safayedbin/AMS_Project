@@ -7,14 +7,14 @@
             <div class="row">
                 <div class="col-12">
                      <div id="cover">
-                         <img src="image/Rectangle 7.png" alt="">
+                         <img src="{{asset('image/Rectangle 7.png')}}" alt="">
                      </div>
                  </div>
             </div>
             <div class="row">
             <div class="col-12">
                  <div class="header">
-                     <h2>Course Code-CourseName-Section</h2>
+                     <h2>{{$course["course_code"]."-".$course["title"] . "-Section " . $course["section"] }}</h2>
                      <p><a href="/dashboard" >Dashboard</a>><a href="">Courses</a></p>
                  </div>
             </div>
@@ -24,19 +24,19 @@
                      <div class="row">
                          <ul class="coursesButton">
                              <li>
-                                 <button type="button" class="btn btn-primary"><a href="/noticepannel">Notices</a></button>
+                                 <button type="button" class="btn btn-primary"><a href="/noticepannel/{{$course['id']}}">Notices</a></button>
                              </li>
                              <li>
-                                 <button type="button" class="btn btn-primary"><a href="/quizpannel">Quiz</a></button>
+                                 <button type="button" class="btn btn-primary"><a href="/quizpannel/{{$course['id']}}">Quiz</a></button>
                              </li>
                              <li>
-                                 <button type="button" class="btn btn-primary"><a href="/assignmentpanel">Assignment</a></button>
+                                 <button type="button" class="btn btn-primary"><a href="/assignmentpanel/{{$course['id']}}">Assignment</a></button>
                              </li>
                              <li>
-                                <button type="button" class="btn btn-primary"><a href="/testpannel">Test</a></button>
+                                <button type="button" class="btn btn-primary"><a href="/testpannel/{{$course['id']}}">Test</a></button>
                             </li>
                             <li>
-                                <button type="button" class="btn btn-primary"><a href="/gradepannel">Results</a></button>
+                                <button type="button" class="btn btn-primary"><a href="/gradepannel/{{$course['id']}}">Results</a></button>
                             </li>
                          </ul>
 
@@ -53,11 +53,11 @@
                      <div id="ProgressBox">
                          <div class="row">
                              <div class="col-2">
-                                 <img src="image/dummyProfile.jpg" class="iconGrader" alt="">
+                                 <img src="{{asset('image/dummyProfile.jpg')}}" class="iconGrader" alt="">
                              </div>
                              <div class="col-10">
-                                 <h6>Tagline</h6>
-                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa soluta alias.</p>
+                                 <h6>Edutarcking</h6>
+                                 <p>Keep it up you are doing a great job</p>
                              </div>
                          </div>
                          <div class="row">

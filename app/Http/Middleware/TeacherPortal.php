@@ -15,13 +15,13 @@ class TeacherPortal
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if($request->session()->has('User_type')== 'Teacher'){
+        if($request->session()->has('User_type') == 'Teacher'){
 
             return $next($request);
             }
             else{
                 return response()->json('unauthorised',401);
             }
-        
+
     }
 }

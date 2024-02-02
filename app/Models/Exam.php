@@ -13,12 +13,16 @@ class Exam extends Model
     use HasFactory;
 
     protected $fillable = [
+        
         'title',
         'type',
         'Due_date',
-        'unlocks_at',
+        'unlocks',
         'Duration',
+        'Total_Marks',
+        'course_fk',
     ];
+
 
     public function course():BelongsTo{
         return $this->belongsTo(Course::class);

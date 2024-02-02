@@ -3,7 +3,9 @@
 namespace App\Http\Middleware;
 
 use Closure;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpFoundation\Response;
 
 class StudentPortal
@@ -16,12 +18,12 @@ class StudentPortal
     public function handle(Request $request, Closure $next): Response
     {
 
-        if($request->session->has('User_type') == 'Student'){
+        if(Session::has('User_type') == 'Student'){
             return $next($request);
             }
             else{
                 return response()->json('unauthorised',401);
             }
-        
+
     }
 }

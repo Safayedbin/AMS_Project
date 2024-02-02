@@ -5,6 +5,9 @@
    <!--Courses Content-->
 
    <div class="container">
+    {{$exam}} <br>
+    {{ $course}} <br>
+    {{$question}} <br>
     <div id="testBoard">
         <div class="row d-flex justify-content-between">
             <div class="col-2">
@@ -27,7 +30,7 @@
                     </div>
                     <!--repeater-->
                     {{ $i=1;}}
-                    @foreach ( $questions as $question )
+                    @foreach ( $question as $question )
                     <div class="row justify-content-between">
                         <div class="col-10">
                             <p><span>Q. {{$i}}</span> {{$question['longtext']}}</p>
@@ -43,7 +46,7 @@
                             your answers. Good luck!
                         </h6>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="col-4">

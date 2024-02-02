@@ -8,14 +8,9 @@
     <div id="testBoard">
         <div class="row d-flex justify-content-between">
             <div class="col-2">
-                <h3 class="header title">Title</h3>
+                <h3 class="header title">{{$exam['title']}}</h3>
             </div>
-            <div class="col-3">
-                <h4 style="display: inline;">Time Left</h4>
-                <h4 style="width:60%;border:1px solid black; background-color: #F3F4FD; float: right ; text-align: center;">
-                    00:00
-                </h4>
-            </div>
+
         </div>
         <div class="row">
             <div class="col-8">
@@ -26,15 +21,20 @@
                         </div>
                     </div>
                     <!--repeater-->
-                    {{ $i=1;}}
-                    @foreach ( $questions as $question )
+                    @php
+                        $i=1;
+                    @endphp
+
+                    @foreach( $question as $question )
                     <div class="row justify-content-between">
                         <div class="col-10">
-                            <p><span>Q. {{$i}}</span> {{$question['longtext']}}</p>
+                            <p><span>Q. {{$i}}</span> {{$question['Question_text']}}</p>
                         </div>
-                        <div class="col-1">{{$question['marks']}}</div>
+                        <div class="col-1">{{$question['Marks']}}</div>
                     </div>
-                    {{$i++;}}
+                    @php
+                        $i++;
+                    @endphp
 
                     <!--repeater-->
                     @endforeach
@@ -46,7 +46,9 @@
 
                 </div>
             </div>
+
             <div class="col-4">
+                <form action="/Answerupload/{{$course['id']}}" method="POST" enctype="multipart/form-data">
                 <div class="submissionTerminal">
                     <h4>Submission Details</h4>
                     Here are the formal instructions:
@@ -70,13 +72,20 @@
                         </li>
                     </ol></b>
                     Please follow these instructions carefully to ensure your answers are correctly formatted and easily readable. Good luck!
+                    @if (session('alert'))
+                        <div class="alert alert-danger">
+                         {{ session('alert') }}
+                        </div>
+                    @endif
 
-                    <input name="Answer" class="input_file" type="file" accept="image/jpeg,image/gif,image/png,application/pdf">
+                    <input  class="input_file" name="fileUpload" type="file" accept="image/jpeg,image/gif,image/png,application/pdf" >
                     <input name="submit" class="btn btn-primary" type="submit" style="margin-left: 40%;">
 
 
                 </div>
+            </form>
             </div>
+
         </div>
     </div>
 </div>
