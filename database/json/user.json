@@ -1,0 +1,34 @@
+[
+   {
+    "name": "Safayed Bin Islam",
+    "password": "123456",
+    "organization_id": "011193080",
+    "acc_type": "Student",
+    "image_fk": "1",
+    "title": "Student"
+   },
+   {
+    "name": "John doe",
+    "password": "123456",
+    "organization_id": "011193180",
+    "acc_type": "Teacher",
+    "image_fk": "1",
+    "title": "Lecturer"
+   },
+   {
+    "name": "Mother Teresa",
+    "password": "123456",
+    "organization_id": "011193280",
+    "acc_type": "Student",
+    "image_fk": "1",
+    "title": "Student"
+   },
+   {
+    "name": "Yousuf Saleh",
+    "password": "123456",
+    "organization_id": "011193380",
+    "acc_type": "Student",
+    "image_fk": "1",
+    "title": "Student"
+   }
+]

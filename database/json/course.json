@@ -1,0 +1,21 @@
+[
+   {
+    "title": "Software Engineering",
+    "course_code": "CSE 4562",
+    "section": "A",
+    "teacher_fk": "2"
+   },
+   {
+    "title": "System Analayis and Design",
+    "course_code": "CSE 3562",
+    "section": "B",
+    "teacher_fk": "2"
+   },
+   {
+    "title": "Project Management",
+    "course_code": "PMG 4562",
+    "section": "A",
+    "teacher_fk": "2"
+   }
+]
+

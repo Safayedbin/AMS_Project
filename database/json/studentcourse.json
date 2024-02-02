@@ -1,0 +1,19 @@
+[
+    {
+        "student_fk":"1",
+        "course_fk":"1"
+    },
+    {
+        "student_fk":"1",
+        "course_fk":"2"
+    },
+    {
+        "student_fk":"1",
+        "course_fk":"3"
+    },
+    {
+        "student_fk":"3",
+        "course_fk":"2"
+    }
+]
+

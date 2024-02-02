@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('password');
             $table->string('organization_id')->unique();
-            $table->unsignedBigInteger('image_fk');
+            $table->unsignedBigInteger('image_fk')->nullable();
             $table->foreign('image_fk')->references('id')->on('images');
 
             $table->enum('acc_type', ['Teacher', 'Student', 'admin', 'Controller']);
