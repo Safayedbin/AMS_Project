@@ -3,14 +3,14 @@
             <div id="sidebar" >
                 <div class="row">
                     <div class="col-12">
-                        <img src="image/logo_white.png" alt="" class="logo_white">
+                        <img src="{{asset('image/logo_white.png')}}" alt="" class="logo_white">
                         <button class="arrowbutton"><i class="fa-solid fa-arrow-right-long"></i></button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="profileCover">
-                            <img src="image/dummyProfile.jpg" alt="" class="profileLogo">
+                            <img src="{{asset('image/dummyProfile.jpg')}}" alt="" class="profileLogo">
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <button class="sidebarbtn logout"> <i class="fa-solid fa-arrow-right-from-bracket iconsidebar logout"><a href=""></a></i></button>
+                        <button class="sidebarbtn logout" onclick='window.location.href = "logout"'> <i class="fa-solid fa-arrow-right-from-bracket iconsidebar logout" ></i></button>
                     </div>
                 </div>
             </div>

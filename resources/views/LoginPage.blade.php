@@ -143,10 +143,21 @@
         <h3>Login Here</h3>
 
         <label for="ID">ID</label>
-        <input type="text" placeholder="Enter your ID" id="id">
+        @if (session('alert-id'))
+            <div class="alert alert-danger">
+             {{ session('alert-id') }}
+            </div>
+        @endif
+        <input type="text" name="id" placeholder="Enter your ID" id="id">
+
 
         <label for="password">Password</label>
-        <input type="password" placeholder=" Enter Your Password" id="password">
+        @if (session('alert'))
+            <div class="alert alert-danger">
+             {{ session('alert') }}
+            </div>
+        @endif
+        <input type="password" name="password" placeholder=" Enter Your Password" id="password">
 
         <button>Log In</button>
 
