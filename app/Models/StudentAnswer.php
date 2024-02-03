@@ -10,9 +10,12 @@ class StudentAnswer extends Model
 {
     use HasFactory;
 
+    protected $fillable= [
+        "answer_text",
+        "student_fk",
+        "question_fk",
+    ];
 
-
-    protected $fillable = ['Answer_text'];
     public function user():BelongsTo{
         return $this->belongsTo(User::class);
     }

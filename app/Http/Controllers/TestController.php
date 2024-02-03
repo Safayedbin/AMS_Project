@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\Notice;
+use App\Models\StudentAnswer;
 use Illuminate\Http\Request;
 use Symfony\Component\Process\Process;
 use Illuminate\Support\Facades\Session;
@@ -53,8 +54,17 @@ class TestController extends Controller{
             echo $process->getErrorOutput();  // Print the error output
             throw new ProcessFailedException($process);
         }
-        return $process->getOutput();
 
+
+        $Answer= collect($process->getOutput());
+        $Answer->each(function($Answer){
+            StudentAnswer::created([
+                "answer_text"=> $Answer->answer_text,
+                "question_fk"=> $Answer->answer_text,
+                "Student_fk"=> Session::get('id'),
+            ]);
+        });
+        
     }
 
     function Checker($correct, $written){
