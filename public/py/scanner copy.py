@@ -1,9 +1,7 @@
 #pip install pytesseract
 #pip install pdf2image
 #pip install -U sentence-transformers
-
-#!C:\Users\User\AppData\Local\Programs\Python\Python39\
-
+#C:\Users\User\AppData\Local\Programs\Python\Python39\
 
 
 import pytesseract
@@ -12,9 +10,9 @@ import glob
 import os
 import sys
 
-filename = sys.argv[1]
+#filename = sys.argv[1]
 
-all_files = glob.glob(r"public/storage/uploads/"+ filename ) # read all files one by one
+all_files = glob.glob(r"public/storage/uploads/"+ "011193080.3.pdf" ) # read all files one by one
 
 #converting image and pdf to String and to txt file
 text=""
@@ -36,4 +34,4 @@ for answer in segmented:
 
 Outputs = sorted(output, key=lambda s: int(s[0]) if s[0].isdigit() else float('inf'))
 
-print(output)
+print(Outputs)

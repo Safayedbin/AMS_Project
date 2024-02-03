@@ -5,7 +5,7 @@
 
 @foreach ($notices as $notice )
 <div class="card mt-1 mb-2">
-    <div class="card-body" onclick='window.location.href = "noticepaper"'>
+    <div class="card-body" onclick='window.location.href = "/noticepaper/{{$notice["id"]."/". $course["id"]}}"'>
         <ul>
             <li>{{$notice['title']}}</li>
             <li>{{$notice['created_at']}}</li>

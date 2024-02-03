@@ -11,6 +11,7 @@ class QuizAnswer extends Model
     use HasFactory;
 
     protected $fillable = [
+        "Question_fk",
         "option1",
         "option2",
         "option3",
@@ -19,11 +20,6 @@ class QuizAnswer extends Model
         'corect2',
         'corect3',
         'corect4',
-    ];
-    protected $attributes = [    'corect1'=> 0,
-    'corect2'=> 0,
-    'corect3'=> 0,
-    'corect4'=> 0
     ];
 
     public function question():BelongsTo{

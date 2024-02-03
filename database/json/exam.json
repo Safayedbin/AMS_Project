@@ -1,5 +1,5 @@
 [
-    {
+        {
         "title":"Test 1",
         "type":"test",
         "Due_date":"2 Feb",
@@ -53,7 +53,6 @@
         "Total_Marks":"10",
         "course_fk":"1"
         },
-
 
     {
         "title":"Test 1",

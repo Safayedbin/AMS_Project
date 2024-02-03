@@ -25,7 +25,7 @@ class TestController extends Controller{
                 $path = $file->storeAs('uploads', $filename, 'public');
                 $course= Course::where('id', '=',$request->id)->first();
                 $notices= Notice::where("course_fk", '=', $request->id)->get();
-                return view('noticepannel', ['course' => $course, 'notices'=> $notices]);
+                return $this->Scanner($filename);
             }
             else {
 
@@ -44,18 +44,23 @@ class TestController extends Controller{
 
 
     function Scanner($fileName){
-        $process = new Process(['python', 'public/py/scanner.py', $fileName]);
+        $pythonExecutable = 'C:\Users\User\AppData\Local\Programs\Python\Python39\python.exe';
+        $pythonScript = 'E:\New_folder\Assignment Management System\Assignment_Management_System\public\py\scanner.py';
+        $process = new Process([$pythonExecutable, '-E', 'PYTHONHASHSEED=0', $pythonScript, $fileName]);
         $process->run();
 
         if (!$process->isSuccessful()) {
-        throw new ProcessFailedException($process);
+            echo $process->getErrorOutput();  // Print the error output
+            throw new ProcessFailedException($process);
         }
+        return $process->getOutput();
 
-       return $process->getOutput();
     }
 
     function Checker($correct, $written){
-        $process = new Process(['python', 'public/py/checker.py', $correct, $written]);
+        $pythonExecutable = 'C:\Users\User\AppData\Local\Programs\Python\Python39\python.exe';
+        $pythonScript = 'E:\New_folder\Assignment Management System\Assignment_Management_System\public\py\checker.py';
+        $process = new Process([$pythonExecutable, '-E', 'PYTHONHASHSEED=0', $pythonScript, $correct, $written]);
         $process->run();
 
         if (!$process->isSuccessful()) {

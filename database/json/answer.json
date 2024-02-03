@@ -1,0 +1,64 @@
+[
+    {
+     "Answer_text" : "Software engineering is the application of principles used in the field of engineering, which usually deals with physical systems, to the design, development, testing, deployment and management of software systems."
+
+    },
+    {
+     "Answer_text" : "While computer science focuses on the foundations of computing (like algorithms, data structures, and theory), software engineering is concerned with the practicalities of developing and delivering software solutions."
+
+    },
+    {
+     "Answer_text" : "The software development life cycle (SDLC) is a framework that describes the steps involved in the development of software from initial concept, through to testing and maintenance. The stages typically include requirements gathering, design, implementation, testing, deployment, and maintenance"
+
+    },
+    {
+     "Answer_text" : " Agile is a type of software development methodology that emphasizes iterative progress, team collaboration, and customer satisfaction. Key principles include breaking down the project into manageable increments, frequent reassessment and adaptation of plans, and close collaboration between developers and stakeholders."
+
+    },
+
+    {
+        "Answer_text" : " Scrum is a type of Agile methodology that organizes work into small, manageable pieces called sprints. This methodology emphasizes daily communication and flexible reassessment of plans that are carried out in short, iterative phases of work."
+
+       },
+       {
+        "Answer_text" : " A version control system allows developers to track and manage changes to software code. It provides an organized snapshot of your code at any point in time and helps manage merging code changes from multiple contributors."
+
+       },
+       {
+        "Answer_text" : " Test-driven development (TDD) is a software development process where the developer writes tests before writing the minimum amount of code required for the test to be passed. The process is often summed up as \"red, green, refactor,\" where red means the test is failing, green means the test is passing, and refactor means improving the existing code."
+
+       },
+       {
+        "Answer_text" : " DevOps is a set of practices that combines software development and IT operations. It aims to shorten the system development life cycle and provide continuous delivery with high software quality."
+
+       },
+
+       {
+        "Answer_text" : "A software framework is a platform for developing software applications. It provides a foundation on which software developers can build programs for a specific platform. Examples include .NET for Windows development and Django for Python development."
+
+       },
+       {
+        "Answer_text" : " Cloud computing is the delivery of computing services over the internet (\"the cloud\") rather than using local servers or personal devices. Services include servers, storage, databases, networking, software, analytics, and intelligence."
+
+       },
+       {
+        "Answer_text" : "Functional programming is a programming paradigm where programs are constructed by applying and composing functions. It emphasizes immutability, avoiding changing-state and mutable data."
+
+       },
+       {
+        "Answer_text" : "Object-oriented programming is a programming paradigm based on the concept of \"objects\", which can contain data and code: data in the form of fields, and code, in the form of procedures."
+
+       },
+
+       {
+           "Answer_text" : " The key difference between a library and a framework is the \"Inversion of Control\". When you call a method from a library, you are in control. But with a framework, the control is inverted: the framework calls you."
+
+          },
+          {
+           "Answer_text" : " Big O notation is a mathematical notation that describes the limiting behavior of a function when "
+
+          }
+
+
+]
+

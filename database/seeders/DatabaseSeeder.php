@@ -20,9 +20,9 @@ class DatabaseSeeder extends Seeder
         CourseSeeder::class,
         StudentCourseSeeder::class,
         ExamSeeder::class,
-        //QuestionSeeder::class,
-        //AnswerSeeder::class,
-        //QuizAnswerSeeder::class
+        QuestionSeeder::class,
+        AnswerSeeder::class,
+        QuizAnswerSeeder::class
         //StatusSeeder::class,
         //NoticeSeeder::class,
        // StudentAnswerSeeder::class,

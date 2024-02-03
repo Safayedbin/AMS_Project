@@ -1,0 +1,87 @@
+[
+    {   "Question_fk": "15",
+        "option1":  "The application of engineering principles to the design, development, and implementation of software" ,
+        "option2":  "The study of hardware components." ,
+        "option3":  "The process of painting a picture." ,
+        "option4":  "The science of cooking." ,
+        "correct1":  "0" ,
+        "correct2":  "1" ,
+        "correct3":  "0" ,
+        "correct4":  "0"
+    },
+    {
+        "Question_fk": "16",
+        "option1":  "Software engineering is about building bridges, while computer science is about painting. " ,
+        "option2":  "Software engineering is concerned with the practicalities of developing and delivering " ,
+        "option3":  "Software engineering and computer science are the same." ,
+        "option4":  "Computer science is about cooking, while software engineering is about painting." ,
+        "correct1":  "0" ,
+        "correct2":  "0" ,
+        "correct3":  "1" ,
+        "correct4":  "0"
+    },
+    {   "Question_fk": "17",
+        "option1":  " A type of software development methodology that emphasizes iterative progress, team collaboration, and customer satisfaction" ,
+        "option2":  "A methodology that encourages waterfall model." ,
+        "option3":  "A type of cooking method. " ,
+        "option4":  "A type of painting style." ,
+        "correct1":  "0" ,
+        "correct2":  "1" ,
+        "correct3":  "0" ,
+        "correct4":  "0"
+    },
+    {   "Question_fk": "18",
+        "option1":  " A type of Agile methodology that organizes work into small, manageable pieces called sprints." ,
+        "option2":  "A type of Agile methodology that encourages long development cycles." ,
+        "option3":  "A type of cooking method." ,
+        "option4":  "A type of painting style." ,
+        "correct1":  "0" ,
+        "correct2":  "1" ,
+        "correct3":  "0" ,
+        "correct4":  "0"
+    },
+    {   "Question_fk": "19",
+        "option1":  "A system that allows developers to track and manage changes to software code. " ,
+        "option2":  "A system that prevents developers from making changes to the code." ,
+        "option3":  "A system that allows chefs to track and manage changes to recipes." ,
+        "option4":  "A system that allows artists to track and manage changes to their paintings." ,
+        "correct1":  "0" ,
+        "correct2":  "1" ,
+        "correct3":  "0" ,
+        "correct4":  "0"
+    },
+    {   "Question_fk": "20",
+        "option1":  "A software development process where the developer writes tests before writing the minimum amount of code required for the test to be passed." ,
+        "option2":  "A software development process where the developer writes tests after the code is written" ,
+        "option3":  "A cooking process where the chef tastes the food before cooking." ,
+        "option4":  "A painting process where the artist visualizes the painting before painting." ,
+        "correct1":  "0" ,
+        "correct2":  "1" ,
+        "correct3":  "0" ,
+        "correct4":  "0"
+    },
+    {   "Question_fk": "21",
+        "option1":  "A set of practices that combines software development and IT operations." ,
+        "option2":  "A set of practices that separates software development and IT operations." ,
+        "option3":  "A set of practices that combines cooking and serving." ,
+        "option4":  "A set of practices that separates painting and exhibiting" ,
+        "correct1":  "0" ,
+        "correct2":  "1" ,
+        "correct3":  "0" ,
+        "correct4":  "0"
+    },
+    {   "Question_fk": "22",
+        "option1":  "The delivery of computing services over the internet (“the cloud”) rather than using local servers or personal devices" ,
+        "option2":  "The delivery of computing services using only local servers or personal devices." ,
+        "option3":  " The process of cooking using a cloud kitchen. " ,
+        "option4":  "The process of painting in the open air." ,
+        "correct1":  "0" ,
+        "correct2":  "1" ,
+        "correct3":  "0" ,
+        "correct4":  "0"
+    }
+
+
+
+]
+

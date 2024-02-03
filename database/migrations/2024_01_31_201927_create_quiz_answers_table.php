@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('quiz_answers', function (Blueprint $table) {
             $table->id('id');
-            $table->foreign('id')->references('id')->on('questions')->onUpdate('cascade');
-
+            $table->unsignedBigInteger('Question_fk');
+            $table->foreign('Question_fk')->references('id')->on('questions')->onUpdate('cascade');
             $table->string('option1');
             $table->string('option2');
             $table->string('option3');
